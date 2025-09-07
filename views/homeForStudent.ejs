@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🎓 Student Portal</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <% if (locals.user) { %>
+
+      <% } %>
+        <h2 class="mb-4">Welcome, <%= user.name %> 👋</h2>
+
+        <div class="row g-4">
+
+          <!-- Upcoming Classes -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-header bg-primary text-white">📅 Upcoming Classes</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Math - Monday, 10 AM</li>
+                <li class="list-group-item">Science - Tuesday, 11 AM</li>
+                <li class="list-group-item">English - Wednesday, 9 AM</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Assignments -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-header bg-success text-white">📝 Assignments</div>
+              <div class="card-body">
+                <p><strong>Math:</strong> Chapter 4 problems (Due: 15th Sept)</p>
+                <p><strong>Science:</strong> Lab Report (Due: 18th Sept)</p>
+                <a href="#" class="btn btn-sm btn-outline-dark">Submit Assignment</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Study Material -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-header bg-info text-white">📚 Study Material</div>
+              <ul class="list-group list-group-flush">
+                
+                  <li class="list-group-item"><a href="/access">Math Chapter 1 Notes</a></li>
+                  <li class="list-group-item"><a href="/access">Science Experiment Guide</a></li>
+                  <li class="list-group-item"><a href="/access">English Sample Essay</a></li>
+                
+              </ul>
+            </div>
+          </div>
+
+          <!-- Grades -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-header bg-warning text-dark">📊 Recent Grades</div>
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Math</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>Science</td>
+                    <td>B+</td>
+                  </tr>
+                  <tr>
+                    <td>English</td>
+                    <td>A-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
